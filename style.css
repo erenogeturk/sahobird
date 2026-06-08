@@ -1,0 +1,42 @@
+/* ── Reset ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #1a1a2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+#gameWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Subtle scanline CRT effect for retro feel */
+  image-rendering: pixelated;
+}
+
+#gameCanvas {
+  display: block;
+  /* Crisp pixel rendering */
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  /* Subtle border glow */
+  box-shadow:
+    0 0 0 3px #222,
+    0 0 30px rgba(100, 220, 100, 0.2),
+    0 0 60px rgba(0, 0, 0, 0.8);
+  border-radius: 2px;
+}
